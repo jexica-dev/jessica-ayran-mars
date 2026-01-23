@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,60 +19,133 @@
     <title>Jessica's Portfolio</title>
   </head>
   <body>
-    <section id="header">
-      <section id="profile">
+    <div id="container"></div>
+
+    <nav class="navbar">
+      <div class="nav-logo-container">
+        <h1 class="nav-logo">jexica</h1>
         <img
-          class="profile-headshot"
-          src="assets/images/jexica-headshot.jpg"
-          alt="jexica head-shot"
+          class="nav-headshot"
+          src="/images/jexica-headshot.jpg"
+          alt="jexica headshot"
         />
-        <h1><span>jexica</span></h1>
-        <p class="full-name"><span> JESSICA AYRAN</span></p>
-        <p></p>
-      </section>
-      <section id="about">
-        <h2><span>_about</span></h2>
-        <p id="about-body">
-          <span>
-            I'm a creative programmer and multi-disciplinary designer. With a
-            background spanning architecture, furniture design, and graphic
-            arts, I approach the digital canvas as a space for artistic
-            expression. Currently expanding my technical repertoire at Code the
-            Dream, I blend a maker’s sensibility with modern code to craft
-            digital environments that are visually poetic and thoughtfully
-            tactile.
-          </span>
-        </p>
-      </section>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2><span>_about</span></h2>
+      <p id="about-body">
+        I'm Jessica Ayran < jexica >,<br />
+        a creative programmer and multi-disciplinary designer from the sf bay
+        area. <br />I blend a maker’s sensibility with modern code to craft
+        poetic digital experiences.
+      </p>
     </section>
-    <section id="exp-skills">
-      <section id="experience">
-        <h2><span>_experience</span></h2>
-        <span>
-          <ul>
-            <li>
-              Bachelor of Architecture [BArch], California College of the Arts,
-              2016
-            </li>
-            <li>Software Engineering Immersive, General Assembly, 2021</li>
-            <li>
-              Currently completing the <strong>Code the Dream</strong> web
-              development program
-            </li>
-          </ul>
-        </span>
-      </section>
-      <section id="skills">
-        <h2 id="skills"><span>_skills</span></h2>
-        <p>
+
+    <section id="experience">
+      <h2><span>_experience</span></h2>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="job-title">Student, Code the Dream</span>
+          <span class="dates">Present</span>
+        </div>
+        <p class="description">
+          Advancing proficiency in full-stack web development.
+        </p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="job-title">Freelance Creative Programmer</span>
+          <span class="dates">2021 — Present</span>
+        </div>
+        <p class="description">
+          Combining full-stack development in React and CSS with professional
+          graphic design and branding to create responsive, user-friendly
+          websites and marketing materials.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="job-title"
+            >Software Engineering Immersive, General Assembly</span
+          >
+          <span class="dates">2021</span>
+        </div>
+        <p class="description">
+          Completed intensive training in modern web technologies: MERN stack
+          and Ruby on Rails.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="job-title">Graphic Designer, Novo Arts</span>
+          <span class="dates">2018 — 2019</span>
+        </div>
+        <p class="description">
+          Developed unique design concepts, photo edits, and 3D furniture models
+          for high-end clients.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="job-title">Xpert, Operations Support, Uber</span>
+          <span class="dates">2015 — 2017</span>
+        </div>
+        <p class="description">
+          Resolved complex issues and utilized bilingual skills to enhance the
+          driver experience.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="job-title">Student Designer, CCA: Urban Activators</span>
+          <span class="dates">2015</span>
+        </div>
+        <p class="description">
+          Designed and built a MadridSalon TEDx Stage for a local community
+          using tensile membrane techniques.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="job-title"
+            >Bachelor of Architecture, California College of the Arts</span
+          >
+          <span class="dates">2016</span>
+        </div>
+        <p class="description">
+          Five-year professional degree focused on spatial design and
+          architectural theory.
+        </p>
+      </div>
+    </section>
+    <section id="skills">
+      <h2 id="skills"><span>_skills</span></h2>
+      <!-- <p>
           <span>
             Adobe CC: Photoshop, Illustrator, Indesign, AfterEffect. <br />
             HTML, CSS, Javascript, ReactJS, NextJS, Node, PostgreSQL, MongoDB,
             Express, Python, Java, TailwindCSS, Bootstrap, MaterialUI, Dall-E 3,
             Stable Diffusion, ChatGPT, Google Gemini, Claude AI
           </span>
-        </p>
-      </section>
+        </p> -->
+    </section>
+    <section id="projects">
+      <h2>_projects</h2>
+      <ul></ul>
     </section>
 
     <section id="contact-connect">
@@ -131,6 +204,12 @@
         </ul>
       </section>
     </section>
+
     <footer>&copy; JEXICA 2026. all rights reserved</footer>
   </body>
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/procedural-gl/build/procedural-gl.js"
+  ></script>
+  <script type="module" src="js/map-background.js"></script>
 </html>
