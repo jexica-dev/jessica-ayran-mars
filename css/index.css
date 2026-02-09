@@ -327,13 +327,6 @@ section {
   margin-bottom: 0.75rem;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.85rem;
-}
-
 /* Links */
 a:link,
 a:visited,
@@ -450,7 +443,6 @@ TABLET - 600px and up
     margin-top: 0;
     list-style-type: none;
     padding: 0.1rem;
-    background-color: #e0e0e0;
   }
 }
 
