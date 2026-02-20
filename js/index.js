@@ -55,3 +55,38 @@ skills.forEach((skillItem) => {
 });
 
 skillsList.style.listStyleType = 'none';
+
+const messageForm = document.forms.leave_message;
+
+messageForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = event.target.usersName.value;
+  const email = event.target.usersEmail.value;
+  const message = event.target.usersMessage.value;
+
+  console.log(name, email, message);
+
+  const messagesSection = document.getElementById('messages');
+  const messageList = messagesSection.querySelector('ul');
+
+  const newMessage = document.createElement('li');
+  newMessage.innerHTML = `
+    <a href="mailto: ${email}">${email}</a>;
+    <span>wrote: ${message}</span>;
+  `;
+
+  const removeButton = document.createElement('button');
+  removeButton.innerText = 'remove';
+  removeButton.type = 'button';
+
+  removeButton.addEventListener('click', () => {
+    const entry = removeButton.parentNode;
+    entry.remove();
+  });
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+
+  messageForm.reset();
+});

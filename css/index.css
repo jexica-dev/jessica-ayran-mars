@@ -79,9 +79,7 @@ NAVIGATION - MOBILE
   position: absolute;
   top: 0;
   left: 0;
-  /* transform: translate(50%, 50%); */
-  /* width: 10px; */
-  /* height: 150px; */
+
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -194,6 +192,60 @@ NAVIGATION - MOBILE
     'wght' 500,
     'ital' 0,
     'opsz' 1;
+}
+
+#leave-message {
+  /* background-color: #f9f9f9; */
+  padding: 2rem;
+  border-radius: 8px; /* Softer, artistic corners */
+  margin: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  font-size: 1rem;
+}
+
+form button {
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Whyte Plus';
+  margin-bottom: 1rem;
+  font-variation-settings:
+    'wght' 400,
+    'ital' 100,
+    'opsz' 1;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+#messages li {
+  list-style: none;
+  padding: 1rem;
+  border-left: 4px solid #333;
+  background: #fff;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* ===========================
