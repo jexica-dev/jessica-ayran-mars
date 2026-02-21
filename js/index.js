@@ -90,3 +90,35 @@ messageForm.addEventListener('submit', (event) => {
 
   messageForm.reset();
 });
+
+// FETCH GITHUB
+
+fetch('https://api.github.com/users/jexica-dev/repos')
+  .then((response) => response.json())
+  .then((repositories) => {
+    console.log(repositories);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+fetch('https://api.github.com/users/jexica-dev/repos')
+  .then((response) => response.json())
+  .then((repositories) => {
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      let links = repositories[i].html_url;
+      let aTag = document.createElement('a');
+      aTag.href = links;
+      aTag.textContent = repositories[i].name;
+      // project.innerText = repositories[i].name;
+      project.appendChild(aTag);
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.log('Error:', error);
+  });
