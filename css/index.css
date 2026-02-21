@@ -248,6 +248,14 @@ form button:hover {
   align-items: center;
 }
 
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
 /* ===========================
 BODY & TYPOGRAPHY - MOBILE
 =========================== */
@@ -352,6 +360,12 @@ section {
 #projects ul {
   list-style: none;
   padding: 0;
+}
+
+#projects li {
+  padding: 15px;
+  flex: 1 1 calc(50% - 20px);
+  text-align: center;
 }
 
 /* Contact & Connect */
@@ -571,6 +585,12 @@ DESKTOP - 1000px and up
 
   #projects {
     scroll-margin-top: 120px;
+  }
+
+  #projects li {
+    padding: 15px;
+    flex: 1 1 calc(33% - 20px);
+    text-align: center;
   }
 
   #connect {
