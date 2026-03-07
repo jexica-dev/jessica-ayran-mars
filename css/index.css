@@ -248,6 +248,14 @@ form button:hover {
   align-items: center;
 }
 
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
 /* ===========================
 BODY & TYPOGRAPHY - MOBILE
 =========================== */
@@ -271,6 +279,18 @@ h2 {
     'ital' 100,
     'opsz' 1;
   font-size: 2.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ===========================
@@ -344,6 +364,16 @@ section {
   scroll-margin-top: 100px;
 }
 
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+#skills li {
+  padding: 5px 15px;
+}
+
 /* Projects Section */
 #projects {
   scroll-margin-top: 100px;
@@ -352,6 +382,12 @@ section {
 #projects ul {
   list-style: none;
   padding: 0;
+}
+
+#projects li {
+  padding: 15px;
+  flex: 1 1 calc(50% - 20px);
+  text-align: center;
 }
 
 /* Contact & Connect */
@@ -571,6 +607,12 @@ DESKTOP - 1000px and up
 
   #projects {
     scroll-margin-top: 120px;
+  }
+
+  #projects li {
+    padding: 15px;
+    flex: 1 1 calc(33% - 20px);
+    text-align: center;
   }
 
   #connect {

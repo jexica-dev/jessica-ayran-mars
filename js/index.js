@@ -25,23 +25,38 @@ footer.appendChild(copyright);
 // SKILLS
 
 const skills = [
-  'Adobe CC: Photoshop, Illustrator, Indesign, AfterEffects',
   'HTML',
   'CSS',
-  'Javascript',
+  'JavaScript',
   'React.js',
   'Next.js',
-  'Node',
+  'TypeScript',
+  'Node.js',
   'PostgreSQL',
   'MongoDB',
   'Express',
   'Python',
   'Java',
+  'Spring Boot',
   'TailwindCSS',
+  'Three.js',
+  'React Three Fiber',
+  'Touchdesigner',
+  'Hydra',
+  'P5.js',
   'Bootstrap',
   'MaterialUI',
+  'Adobe Creative Cloud',
+  'Figma',
+  'AutoCAD',
+  'Rhinoceros',
+  'Blender',
   'Dall-E 3',
   'Stable Diffusion',
+  'Google Cloud',
+  'Vercel',
+  'Netlify',
+  'Heroku',
 ];
 
 const skillsSection = document.getElementById('skills');
@@ -72,7 +87,7 @@ messageForm.addEventListener('submit', (event) => {
 
   const newMessage = document.createElement('li');
   newMessage.innerHTML = `
-    <a href="mailto: ${email}">${email}</a>;
+    <a href="mailto:${email}">${email}</a>;
     <span>wrote: ${message}</span>;
   `;
 
@@ -90,3 +105,59 @@ messageForm.addEventListener('submit', (event) => {
 
   messageForm.reset();
 });
+
+// FETCH GITHUB
+
+// fetch('https://api.github.com/users/jexica-dev/repos')
+//   .then((response) => response.json())
+//   .then((repositories) => {
+//     const projectSection = document.getElementById('projects');
+//     const projectList = projectSection.querySelector('ul');
+
+//     for (let i = 0; i < repositories.length; i++) {
+//       const project = document.createElement('li');
+//       let links = repositories[i].html_url;
+//       let aTag = document.createElement('a');
+//       aTag.href = links;
+//       aTag.textContent = repositories[i].name;
+//       // project.innerText = repositories[i].name;
+//       project.appendChild(aTag);
+//       projectList.appendChild(project);
+//     }
+//   })
+//   .catch((error) => {
+//     console.log('Error:', error);
+//   });
+
+async function getRepositories() {
+  try {
+    // 1. Wait for the fetch to finish
+    const response = await fetch(
+      'https://api.github.com/users/jexica-dev/repos',
+    );
+
+    // 2. Wait for the JSON conversion
+    const repositories = await response.json();
+
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    // 3. Loop through and create your elements
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      const aTag = document.createElement('a');
+
+      aTag.href = repositories[i].html_url;
+      aTag.textContent = repositories[i].name;
+
+      project.appendChild(aTag);
+      projectList.appendChild(project);
+    }
+  } catch (error) {
+    // 4. Handle errors just like .catch()
+    console.log('Error:', error);
+  }
+}
+
+//  call the function
+getRepositories();

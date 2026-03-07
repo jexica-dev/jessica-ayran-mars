@@ -1,7 +1,7 @@
 console.log('Script loaded');
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM ready');
+  // console.log('DOM ready');
 
   const container = document.getElementById('container');
   const datasource = {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   console.log('About to initialize...');
   Procedural.init({ container, datasource });
-  console.log('Initialized');
+  // console.log('Initialized');
 
   Procedural.setRotationControlVisible(true);
 
@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // Pick a random landmark
   const randomIndex = Math.floor(Math.random() * landmarks.length);
   const selectedLandmark = landmarks[randomIndex];
-  console.log(selectedLandmark);
+  // console.log(selectedLandmark);
 
   // Display the random location
   Procedural.displayLocation(selectedLandmark);
-  console.log('Location set:', selectedLandmark.name);
+  // console.log('Location set:', selectedLandmark.name);
 
   // Add mouse movement controls
   document.addEventListener('mousemove', function (e) {
